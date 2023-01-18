@@ -1,0 +1,283 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@font-face {
+    font-family: "Cap";
+    src: url(../font/capitaly_script/CapitalyScript_PERSONAL_USE_ONLY.otf);
+}
+
+@font-face {
+    font-family: "Bil";
+    src: url(../font/Billionstar.ttf);
+}
+
+@font-face {
+    font-family: "Cream";
+    src: url(../font/Cream\ Cake.otf);
+}
+
+@keyframes animTitle {
+    0% {
+        color: var(--bleu);
+        text-shadow: -10px -10px var(--orange), 10px 10px var(--orange);
+        transform: scale(1.0);
+    }
+
+    50% {
+        color: var(--jaune);
+        text-shadow: -10px -10px var(--vert), 10px 10px var(--vert);
+        transform: scale(1.15);
+    }
+
+    100% {
+        color: var(--bleu);
+        text-shadow: -10px -10px var(--orange), 10px 10px var(--orange);
+        transform: scale(1.0);
+    }
+}
+
+@keyframes animInput {
+
+    0% {
+        border-radius: 20px;
+    }
+    
+    50% {
+        border-radius: 10px;
+    }
+
+    100% {
+        border-radius: 20px;
+    }
+}
+
+@keyframes animText {
+
+    0% {
+        color: var(--bleu);
+    }
+    
+    50% {
+        color: var(--violet);
+    }
+
+    100% {
+        color: var(--bleu);
+    }
+}
+
+@keyframes animBouton {
+    0% {
+        transform: scale(1);
+        border-radius: 20px;
+        font-size: 2rem;
+    }
+    50% {
+        transform: scale(1.05);
+        border-radius: 40px;
+        font-size: 2.05rem;
+    }
+    100% {
+        transform: scale(1);
+        border-radius: 20px;
+        font-size: 2rem;
+    }
+}
+
+
+
+:root {
+    --violet: #D5AEF5;
+    --bleu: #BDE2FF;
+    --vert: #74E895;
+    --jaune: #FFFB73;
+    --orange: #F5AF60;
+    --violetfonce: #a13a82;
+}
+
+@media (max-width: 1600px) and (orientation: landscape) {
+    body {
+       background-image: url(../oui.gif);
+    }
+    
+    #title {
+        display: flex;
+        justify-content: center;
+        margin-top: 25px;
+        position: sticky;
+    }
+    
+    h1 {
+        font-family: "Cap", Arial, Helvetica, sans-serif;
+        font-size: 4rem;
+        animation: animTitle 2s ease 0s infinite normal forwards;
+        color: var(--violet);
+        text-shadow: -10px -10px var(--orange), 10px 10px var(--orange);
+        animation: animTitle 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s infinite normal forwards;
+    }
+    
+    #container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 25px;
+    }
+    
+    #container > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #container > div > * {
+        margin: 25px;
+    }
+    
+    #container > div > p {
+        font-family: "Bil", Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+        color: var(--bleu);
+        animation: animText 2s ease 0s infinite normal forwards;
+    }
+    
+    input {
+        border: 3px solid var(--orange);
+        padding: 10px;
+        border-radius: 20px;
+        animation: animInput 2s ease 0s infinite normal forwards;
+        font-family: "Bil", Arial, Helvetica, sans-serif;
+        font-size: 1.25rem;
+        transition: all .4s;
+        background-color: var(--violet);
+    }
+    
+    #choixNombre > input:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 100px 15px var(--orange);
+    }
+    
+    #choixSomme > input:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 100px 15px var(--orange);
+    }
+    
+    
+    #containerBouton {
+        display: flex;
+        justify-content: center;
+    }
+    #bouton {
+        
+        width: 20vw;
+        padding: 10px;
+        border-radius: 20px;
+        font-family: "Cap", Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+        background-color: var(--violet);
+        animation: animBouton 2s ease 0s infinite normal forwards;
+        transition: all .4s;
+    }
+    
+    #bouton:hover {
+        box-shadow: 0px 0px 100px 25px var(--vert);
+        animation: animBoxShadow 2s ease 0s infinite normal forwards;
+    }
+}
+
+@media (min-width: 1601px) and (orientation: landscape) {
+    body {
+        background-image: url(../oui.gif);
+    }
+    
+    #title {
+        display: flex;
+        justify-content: center;
+        margin-top: 50px;
+        position: sticky;
+    }
+    
+    h1 {
+        font-family: "Cap", Arial, Helvetica, sans-serif;
+        font-size: 5rem;
+        animation: animTitle 2s ease 0s infinite normal forwards;
+        color: var(--violet);
+        text-shadow: -10px -10px var(--orange), 10px 10px var(--orange);
+        animation: animTitle 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) 0s infinite normal forwards;
+    }
+    
+    #container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+    
+    #container > div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #container > div > * {
+        margin: 50px;
+    }
+    
+    #container > div > p {
+        font-family: "Bil", Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+        color: var(--bleu);
+        animation: animText 2s ease 0s infinite normal forwards;
+    }
+    
+    input {
+        border: 3px solid var(--orange);
+        padding: 20px;
+        border-radius: 20px;
+        animation: animInput 2s ease 0s infinite normal forwards;
+        font-family: "Bil", Arial, Helvetica, sans-serif;
+        font-size: 1.25rem;
+        transition: all .4s;
+        background-color: var(--violet);
+    }
+    
+    #choixNombre > input:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 100px 15px var(--orange);
+    }
+    
+    #choixSomme > input:hover {
+        transform: scale(1.1);
+        box-shadow: 0px 0px 100px 15px var(--orange);
+    }
+    
+    
+    #containerBouton {
+        display: flex;
+        justify-content: center;
+    }
+    #bouton {
+        width: 20vw;
+        padding: 20px;
+        border-radius: 20px;
+        font-family: "Cap", Arial, Helvetica, sans-serif;
+        font-size: 2rem;
+        background-color: var(--violet);
+        animation: animBouton 2s ease 0s infinite normal forwards;
+        transition: all .4s;
+    }
+    
+    #bouton:hover {
+        box-shadow: 0px 0px 100px 25px var(--vert);
+        animation: animBoxShadow 2s ease 0s infinite normal forwards;
+    }
+
+#score > p {
+    font-size: 3rem;
+}
+
+}
+
+
+
