@@ -12,8 +12,8 @@ function morafin($gagnant){
     require_once './views/morafin.php';
 }
 
-function inscription(){
-
+function inscription($id,$password){
+    
 }
 
 function authentification(){

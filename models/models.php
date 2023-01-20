@@ -57,6 +57,20 @@ function authenticate($identifiant, $password) {
 }
 
 
+function ConnexionInscription($id,$password){
+    $bdd = getDatabase();
+    $query = $bdd->prepare("SELECT * FROM members WHERE id = :id");
+    $query->execute([
+        'id' => $id]);
+    $result = $query->fetch();
+    if (isset($result)){
+        authenticate($id,$password);
+    }
+    else{
+        addMember($id,$password);
+    }
+}
+
 function ajoutewin($id){
   $bdd = getDatabase();
     $query = $bdd->prepare("UPDATE members SET win = win + 1 WHERE id = :id");

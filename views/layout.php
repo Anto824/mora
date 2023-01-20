@@ -16,7 +16,7 @@
             <?= $content ?>
         </div>
         <footer>
-            ©Università di Corsica
+            ©ADAP Studio
         </footer>
         <hr/>
     </body>
