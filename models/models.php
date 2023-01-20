@@ -78,4 +78,17 @@ function ajoutewin($id){
         'id' => $id]);
 }
 
+
+function getLeaderboard() {
+  try {
+      $bdd = getDatabase();
+      $query = $bdd->prepare("SELECT identifiant,win FROM members ORDER BY win DESC");
+      $query->execute();
+      $result = $query->fetchAll();
+      return $result;
+  } catch (PDOException $e) {
+      echo "Error: " . $e->getMessage();
+  }
+}
+
 ?>

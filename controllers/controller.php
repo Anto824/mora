@@ -13,11 +13,12 @@ function morafin($gagnant){
 }
 
 function inscription($id,$password){
-    
+    ConnexionInscription($id,$password);
+    require_once './views/mora.php';
 }
 
-function authentification(){
-    
-}
+
+
+
 
 ?>
