@@ -22,5 +22,9 @@ function voirLeaderboard(){
     require_once './views/leaderboard.php';
 }    
 
+function accueil(){
+    require_once './views/accueil.php';
+}
+
 
 ?>
