@@ -29,7 +29,7 @@ function getDatabase() {
         echo "Error: " . $e->getMessage();
     }
 }
-function authentification($identifiant, $password) {
+function authenticate($identifiant, $password) {
   try {
       $bdd = getDatabase();
       $query = $bdd->prepare("SELECT password_hash FROM members WHERE identifiant = :identifiant");
@@ -40,6 +40,8 @@ function authentification($identifiant, $password) {
           $password_hash = $result['password_hash'];
           if (password_verify($password, $password_hash)) {
               // successful login
+              session_start();
+              $_SESSION['identifiant'] = $identifiant;
               return true;
           } else {
               // invalid password
@@ -52,6 +54,16 @@ function authentification($identifiant, $password) {
   } catch (PDOException $e) {
       echo "Error: " . $e->getMessage();
   }
+}
+
+
+function ajoutewin(){
+  $bdd = getDatabase();
+  $query = $bdd->prepare("UPDATE members SET win = win + 1 WHERE identifiant = :identifiant");
+  $query->execute([
+      'identifiant' => $_SESSION['identifiant']
+  ]);
+
 }
 
 ?>
