@@ -10,13 +10,8 @@
             <h2><?= $title ?></h2>
             
         </header>
-        <hr/>
         <div>
             <?= $content ?>
         </div>
-        <footer>
-            ©ADAP Studio
-        </footer>
-        <hr/>
     </body>
 </html>

@@ -99,7 +99,7 @@
 
 @media (max-width: 1600px) and (orientation: landscape) {
     body {
-       background-image: url(../oui.gif);
+       background-image: url(../img/oui.gif);
     }
     
     #title {
@@ -188,7 +188,7 @@
 
 @media (min-width: 1601px) and (orientation: landscape) {
     body {
-        background-image: url(../oui.gif);
+        background-image: url(../img/oui.gif);
     }
     
     #title {

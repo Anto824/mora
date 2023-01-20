@@ -62,8 +62,8 @@ function ConnexionInscription($id,$password){
     $query = $bdd->prepare("SELECT * FROM members WHERE id = :id");
     $query->execute([
         'id' => $id]);
-    $result = $query->fetch();
-    if (isset($result)){
+    $result = $query->rowCount();
+    if ($result>0){
         authenticate($id,$password);
     }
     else{

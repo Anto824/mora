@@ -14,7 +14,7 @@ function morafin($gagnant){
 
 function inscription($id,$password){
     ConnexionInscription($id,$password);
-    require_once './views/mora.php';
+    require_once './views/index.php?action=mora';
 }
 
 function voirLeaderboard(){

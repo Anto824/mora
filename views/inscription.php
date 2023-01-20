@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="./connect.css">
+    <link rel="stylesheet" type="text/css" href="./style/connect.css">
     <title>Connexion - ADAP Studio</title>
 </head>
 <body>
@@ -19,7 +19,7 @@
                 <h2>Connexion</h2>
             </div>
             <div id="containerForm">
-                <form action="/ma-page-de-traitement" method="post">
+                <form action="index.php?action=inscription2" method="post">
                     <div>
                         <input type="text" placeholder="Pseudo" id="pseudo" name="user_name">
                     </div>

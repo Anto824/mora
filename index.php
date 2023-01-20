@@ -40,14 +40,11 @@ try {
                 }
             }
         }
-        else{
+    }
+}}
+else{
             throw new Exception('Paramètre manquant');
-        }
-    }
-    else {
-        accueil();
-    }
-}}}  
+        }}  
 
 catch (Exception $e) {
     echo 'Erreur : ' . $e->getMessage();
