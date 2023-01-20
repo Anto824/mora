@@ -57,13 +57,11 @@ function authenticate($identifiant, $password) {
 }
 
 
-function ajoutewin(){
+function ajoutewin($id){
   $bdd = getDatabase();
-  $query = $bdd->prepare("UPDATE members SET win = win + 1 WHERE identifiant = :identifiant");
-  $query->execute([
-      'identifiant' => $_SESSION['identifiant']
-  ]);
-
+    $query = $bdd->prepare("UPDATE members SET win = win + 1 WHERE id = :id");
+    $query->execute([
+        'id' => $id]);
 }
 
 ?>

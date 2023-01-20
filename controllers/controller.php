@@ -7,9 +7,9 @@ function mora(){
     require_once './views/mora.php';
 }
 
-function morafin(){
-    
-
+function morafin($gagnant){
+    ajouterGagnant($gagnant);
+    require_once './views/morafin.php';
 }
 
 function inscription(){
