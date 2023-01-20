@@ -17,8 +17,10 @@ function inscription($id,$password){
     require_once './views/mora.php';
 }
 
-
-
+function voirLeaderboard(){
+    $leaderboard = getLeaderboard();
+    require_once './views/leaderboard.php';
+}    
 
 
 ?>
