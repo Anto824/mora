@@ -22,10 +22,6 @@ try {
                 if ($_GET['action']=='inscription'){
                     inscription();
                 }
-                else{
-                    if ($_GET['action']=='authentification'){
-                        authentification();
-                    }
                     else{
                         throw new Exception('Action inconnue');
                     }
@@ -33,8 +29,13 @@ try {
             }
         }
     }
+    else {
+        accueil();
+    }
     
-}
+
 catch (Exception $e) {
     echo 'Erreur : ' . $e->getMessage();
 }
+
+?>
