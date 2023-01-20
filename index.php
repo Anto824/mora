@@ -47,7 +47,7 @@ try {
     else {
         accueil();
     }
-    
+}}}  
 
 catch (Exception $e) {
     echo 'Erreur : ' . $e->getMessage();
