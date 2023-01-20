@@ -38,6 +38,7 @@ function jouer(){
   }
   if (J1 == 5){
       document.getElementById('gagnant1').hidden = false
+      
       reset()
   }
   else if (J2 == 5){
