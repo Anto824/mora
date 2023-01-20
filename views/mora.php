@@ -1,4 +1,8 @@
-<head onload="reset()">
+<?php $title = ''; ?>
+
+<?php ob_start() ?>
+    <article>
+    <head onload="reset()">
     <title>Mora</title>
     <link rel="stylesheet" type="text/css" href="./style/style.css">
     <meta charset="utf8">
@@ -39,3 +43,9 @@
 
 <script type="text/javascript" src="./script/script.js"></script>
 </body>
+    </article>
+    <hr/>
+
+<?php $content = ob_get_clean(); ?>
+
+<?php require_once 'layout.php'; ?>

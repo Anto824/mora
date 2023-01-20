@@ -19,8 +19,20 @@ try {
                 }
             }
             else{
-                if ($_GET['action']=='inscription'){
+                if ($_GET['action']=='inscription2'){
                     ConnexionInscription($_POST['user_name'],$_POST['user_password']);
+                }
+                else {
+                    if ($_GET['action']=='leaderboard'){
+                        voirLeaderboard();
+                }
+                else{
+                    if ($_GET['action']=='accueil'){
+                        accueil();
+                }
+                else{
+                    if ($_GET['action']=='inscription'){
+                        formulaireInscription();
                 }
                     else{
                         throw new Exception('Action inconnue');

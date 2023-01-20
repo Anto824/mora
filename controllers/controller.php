@@ -26,5 +26,9 @@ function accueil(){
     require_once './views/accueil.php';
 }
 
+function formulaireInscription(){
+    require_once './views/inscription.php';
+}
+
 
 ?>
