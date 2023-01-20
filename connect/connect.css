@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --bleu: #4343a3;
+    --blanc: #f0e3e3;
+    --grisclair: #beaeae;
+    --gris: #333;
+    --noir: #111;
+    --bleufonce: #282870;
+}
+
+@keyframes popOut {
+    0% {
+        box-shadow: 5px 5px var(--bleufonce);
+    }
+    50% {
+        box-shadow: 5px 5px var(--blanc);
+    }
+    100% {
+        box-shadow: 5px 5px var(--bleufonce);
+    }
+    
+}
+
+@font-face {
+    font-family: "ADAP";
+    src: url(../font/gilbert/Gilbert-Bold\ Preview5.otf);
+}
+
+@font-face {
+    font-family: "Roboto";
+    src: url(../font/Roboto/Roboto-Regular.ttf);
+}
+
+body {
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    background-color: var(--gris);
+    background-color: #0096ff;
+background-image: url("data:image/svg+xml,%3Csvg width='42' height='44' viewBox='0 0 42 44' xmlns='http://www.w3.org/2000/svg'%3E%3Cg id='Page-1' fill='none' fill-rule='evenodd'%3E%3Cg id='brick-wall' fill='%23333333' fill-opacity='0.4'%3E%3Cpath d='M0 0h42v44H0V0zm1 1h40v20H1V1zM0 23h20v20H0V23zm22 0h20v20H22V23z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");    
+}
+
+header {
+    font-family: "ADAP", Arial, Helvetica, sans-serif;
+    
+    color: var(--blanc);
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    text-shadow: 2px 2px var(--noir);
+}
+
+h1 {
+    font-size: 2.5rem;
+    padding: 25px;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    
+    margin-top: 50px;
+    color: var(--blanc);
+}
+
+#connexion {
+    padding: 20px;
+    background-color: var(--bleu);
+    border-radius: 15px;
+    box-shadow: 5px 5px var(--bleufonce);
+    width: 20vw;
+    text-align: center;
+}
+
+#containerForm {
+    margin: 50px;
+    
+}
+
+form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+input {
+    padding: 20px;
+    width: 20vw;
+    margin: 25px;
+    border-radius: 15px;
+    border: none;
+    transition: all .4s;
+    box-shadow: 5px 5px var(--grisclair);
+}
+
+input:hover {
+    box-shadow: 5px 5px var(--bleu);
+}
+input:active {
+    transform: scale(0.95);
+    border: none;
+}
+
+
+
+button {
+    background-color: var(--bleu);
+    box-shadow: 5px 5px var(--bleufonce);
+    padding: 20px;
+    width: 15vw;
+    color: var(--blanc);
+    font-family: "Roboto", Arial, Helvetica, sans-serif;
+    border-radius: 15px;
+    border: none;
+    font-size: 1.25em;
+    margin: 50px;
+    transition: all .4s;
+}
+
+button:hover {
+    transform: scale(1.05);
+    animation: popOut 2s ease 0s infinite normal forwards;
+    cursor: pointer;
+}
+
+#mainContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
