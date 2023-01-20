@@ -15,18 +15,21 @@ try {
                     morafin($_GET['gagnant']);
                 }
                 else{
-                    throw new Exception('Paramètre manquant');
+                    throw new Exception('Gagnant non défini');
                 }
             }
             else{
                 if ($_GET['action']=='inscription'){
-                    inscription();
+                    ConnexionInscription($_POST['user_name'],$_POST['user_password']);
                 }
                     else{
                         throw new Exception('Action inconnue');
                     }
                 }
             }
+        }
+        else{
+            throw new Exception('Paramètre manquant');
         }
     }
     else {
